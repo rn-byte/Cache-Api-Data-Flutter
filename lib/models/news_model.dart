@@ -17,7 +17,7 @@ class NewsModel with _$NewsModel {
 @freezed
 class Hits with _$Hits {
   factory Hits({
-    @Default(0) @JsonKey(name: 'id') int id,
+    @Default(0) @JsonKey(name: 'story_id') int id,
     @Default('') @JsonKey(name: 'author') String author,
     @Default('') @JsonKey(name: 'title') String title,
     @Default('') @JsonKey(name: 'url') String url,

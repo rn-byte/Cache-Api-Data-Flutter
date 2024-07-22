@@ -20,7 +20,7 @@ Map<String, dynamic> _$$NewsModelImplToJson(_$NewsModelImpl instance) =>
     };
 
 _$HitsImpl _$$HitsImplFromJson(Map<String, dynamic> json) => _$HitsImpl(
-      id: (json['id'] as num?)?.toInt() ?? 0,
+      id: (json['story_id'] as num?)?.toInt() ?? 0,
       author: json['author'] as String? ?? '',
       title: json['title'] as String? ?? '',
       url: json['url'] as String? ?? '',
@@ -30,7 +30,7 @@ _$HitsImpl _$$HitsImplFromJson(Map<String, dynamic> json) => _$HitsImpl(
 
 Map<String, dynamic> _$$HitsImplToJson(_$HitsImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
+      'story_id': instance.id,
       'author': instance.author,
       'title': instance.title,
       'url': instance.url,

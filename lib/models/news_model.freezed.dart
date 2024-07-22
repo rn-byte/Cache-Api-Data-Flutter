@@ -166,7 +166,7 @@ Hits _$HitsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Hits {
-  @JsonKey(name: 'id')
+  @JsonKey(name: 'story_id')
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'author')
   String get author => throw _privateConstructorUsedError;
@@ -190,7 +190,7 @@ abstract class $HitsCopyWith<$Res> {
       _$HitsCopyWithImpl<$Res, Hits>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
+      {@JsonKey(name: 'story_id') int id,
       @JsonKey(name: 'author') String author,
       @JsonKey(name: 'title') String title,
       @JsonKey(name: 'url') String url,
@@ -255,7 +255,7 @@ abstract class _$$HitsImplCopyWith<$Res> implements $HitsCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int id,
+      {@JsonKey(name: 'story_id') int id,
       @JsonKey(name: 'author') String author,
       @JsonKey(name: 'title') String title,
       @JsonKey(name: 'url') String url,
@@ -313,7 +313,7 @@ class __$$HitsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HitsImpl implements _Hits {
   _$HitsImpl(
-      {@JsonKey(name: 'id') this.id = 0,
+      {@JsonKey(name: 'story_id') this.id = 0,
       @JsonKey(name: 'author') this.author = '',
       @JsonKey(name: 'title') this.title = '',
       @JsonKey(name: 'url') this.url = '',
@@ -324,7 +324,7 @@ class _$HitsImpl implements _Hits {
       _$$HitsImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: 'story_id')
   final int id;
   @override
   @JsonKey(name: 'author')
@@ -383,7 +383,7 @@ class _$HitsImpl implements _Hits {
 
 abstract class _Hits implements Hits {
   factory _Hits(
-      {@JsonKey(name: 'id') final int id,
+      {@JsonKey(name: 'story_id') final int id,
       @JsonKey(name: 'author') final String author,
       @JsonKey(name: 'title') final String title,
       @JsonKey(name: 'url') final String url,
@@ -393,7 +393,7 @@ abstract class _Hits implements Hits {
   factory _Hits.fromJson(Map<String, dynamic> json) = _$HitsImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
+  @JsonKey(name: 'story_id')
   int get id;
   @override
   @JsonKey(name: 'author')

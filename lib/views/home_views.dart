@@ -65,6 +65,8 @@ class _HomeViewsState extends State<HomeViews> {
                     return Card(
                       child: ListTile(
                         title: Text(newsList[index].title),
+                        subtitle: Text(newsList[index].author),
+                        trailing: Text(newsList[index].id.toString()),
                       ),
                     );
                   },
