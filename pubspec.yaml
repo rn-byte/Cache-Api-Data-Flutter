@@ -45,6 +45,7 @@ dependencies:
   cached_network_image:
   another_flushbar:
   equatable:
+  sqflite:
 
 dev_dependencies:
   flutter_test:
