@@ -36,6 +36,16 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
 
+  http:
+  bloc:
+  flutter_bloc:
+  get_it:
+  freezed_annotation:
+  json_annotation:
+  cached_network_image:
+  another_flushbar:
+  equatable:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -46,6 +56,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  freezed:
+  build_runner:
+  json_serializable:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
