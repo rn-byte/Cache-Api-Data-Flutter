@@ -20,6 +20,152 @@ NewsModel _$NewsModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NewsModel {
+  @JsonKey(name: 'hits')
+  List<Hits> get hits => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NewsModelCopyWith<NewsModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NewsModelCopyWith<$Res> {
+  factory $NewsModelCopyWith(NewsModel value, $Res Function(NewsModel) then) =
+      _$NewsModelCopyWithImpl<$Res, NewsModel>;
+  @useResult
+  $Res call({@JsonKey(name: 'hits') List<Hits> hits});
+}
+
+/// @nodoc
+class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
+    implements $NewsModelCopyWith<$Res> {
+  _$NewsModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? hits = null,
+  }) {
+    return _then(_value.copyWith(
+      hits: null == hits
+          ? _value.hits
+          : hits // ignore: cast_nullable_to_non_nullable
+              as List<Hits>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$NewsModelImplCopyWith<$Res>
+    implements $NewsModelCopyWith<$Res> {
+  factory _$$NewsModelImplCopyWith(
+          _$NewsModelImpl value, $Res Function(_$NewsModelImpl) then) =
+      __$$NewsModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: 'hits') List<Hits> hits});
+}
+
+/// @nodoc
+class __$$NewsModelImplCopyWithImpl<$Res>
+    extends _$NewsModelCopyWithImpl<$Res, _$NewsModelImpl>
+    implements _$$NewsModelImplCopyWith<$Res> {
+  __$$NewsModelImplCopyWithImpl(
+      _$NewsModelImpl _value, $Res Function(_$NewsModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? hits = null,
+  }) {
+    return _then(_$NewsModelImpl(
+      hits: null == hits
+          ? _value._hits
+          : hits // ignore: cast_nullable_to_non_nullable
+              as List<Hits>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NewsModelImpl implements _NewsModel {
+  _$NewsModelImpl({@JsonKey(name: 'hits') final List<Hits> hits = const []})
+      : _hits = hits;
+
+  factory _$NewsModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NewsModelImplFromJson(json);
+
+  final List<Hits> _hits;
+  @override
+  @JsonKey(name: 'hits')
+  List<Hits> get hits {
+    if (_hits is EqualUnmodifiableListView) return _hits;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_hits);
+  }
+
+  @override
+  String toString() {
+    return 'NewsModel(hits: $hits)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewsModelImpl &&
+            const DeepCollectionEquality().equals(other._hits, _hits));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_hits));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
+      __$$NewsModelImplCopyWithImpl<_$NewsModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NewsModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NewsModel implements NewsModel {
+  factory _NewsModel({@JsonKey(name: 'hits') final List<Hits> hits}) =
+      _$NewsModelImpl;
+
+  factory _NewsModel.fromJson(Map<String, dynamic> json) =
+      _$NewsModelImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'hits')
+  List<Hits> get hits;
+  @override
+  @JsonKey(ignore: true)
+  _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Hits _$HitsFromJson(Map<String, dynamic> json) {
+  return _Hits.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Hits {
   @JsonKey(name: 'id')
   int get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'author')
@@ -35,14 +181,13 @@ mixin _$NewsModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NewsModelCopyWith<NewsModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $HitsCopyWith<Hits> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NewsModelCopyWith<$Res> {
-  factory $NewsModelCopyWith(NewsModel value, $Res Function(NewsModel) then) =
-      _$NewsModelCopyWithImpl<$Res, NewsModel>;
+abstract class $HitsCopyWith<$Res> {
+  factory $HitsCopyWith(Hits value, $Res Function(Hits) then) =
+      _$HitsCopyWithImpl<$Res, Hits>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') int id,
@@ -54,9 +199,9 @@ abstract class $NewsModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
-    implements $NewsModelCopyWith<$Res> {
-  _$NewsModelCopyWithImpl(this._value, this._then);
+class _$HitsCopyWithImpl<$Res, $Val extends Hits>
+    implements $HitsCopyWith<$Res> {
+  _$HitsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -103,11 +248,10 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
 }
 
 /// @nodoc
-abstract class _$$NewsModelImplCopyWith<$Res>
-    implements $NewsModelCopyWith<$Res> {
-  factory _$$NewsModelImplCopyWith(
-          _$NewsModelImpl value, $Res Function(_$NewsModelImpl) then) =
-      __$$NewsModelImplCopyWithImpl<$Res>;
+abstract class _$$HitsImplCopyWith<$Res> implements $HitsCopyWith<$Res> {
+  factory _$$HitsImplCopyWith(
+          _$HitsImpl value, $Res Function(_$HitsImpl) then) =
+      __$$HitsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,11 +264,10 @@ abstract class _$$NewsModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$NewsModelImplCopyWithImpl<$Res>
-    extends _$NewsModelCopyWithImpl<$Res, _$NewsModelImpl>
-    implements _$$NewsModelImplCopyWith<$Res> {
-  __$$NewsModelImplCopyWithImpl(
-      _$NewsModelImpl _value, $Res Function(_$NewsModelImpl) _then)
+class __$$HitsImplCopyWithImpl<$Res>
+    extends _$HitsCopyWithImpl<$Res, _$HitsImpl>
+    implements _$$HitsImplCopyWith<$Res> {
+  __$$HitsImplCopyWithImpl(_$HitsImpl _value, $Res Function(_$HitsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +280,7 @@ class __$$NewsModelImplCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? updatedAt = null,
   }) {
-    return _then(_$NewsModelImpl(
+    return _then(_$HitsImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -168,8 +311,8 @@ class __$$NewsModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NewsModelImpl implements _NewsModel {
-  _$NewsModelImpl(
+class _$HitsImpl implements _Hits {
+  _$HitsImpl(
       {@JsonKey(name: 'id') this.id = 0,
       @JsonKey(name: 'author') this.author = '',
       @JsonKey(name: 'title') this.title = '',
@@ -177,8 +320,8 @@ class _$NewsModelImpl implements _NewsModel {
       @JsonKey(name: 'created_at') this.createdAt = '',
       @JsonKey(name: 'updated_at') this.updatedAt = ''});
 
-  factory _$NewsModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NewsModelImplFromJson(json);
+  factory _$HitsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HitsImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -201,14 +344,14 @@ class _$NewsModelImpl implements _NewsModel {
 
   @override
   String toString() {
-    return 'NewsModel(id: $id, author: $author, title: $title, url: $url, createdAt: $createdAt, updatedAt: $updatedAt)';
+    return 'Hits(id: $id, author: $author, title: $title, url: $url, createdAt: $createdAt, updatedAt: $updatedAt)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NewsModelImpl &&
+            other is _$HitsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.title, title) || other.title == title) &&
@@ -227,28 +370,27 @@ class _$NewsModelImpl implements _NewsModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
-      __$$NewsModelImplCopyWithImpl<_$NewsModelImpl>(this, _$identity);
+  _$$HitsImplCopyWith<_$HitsImpl> get copyWith =>
+      __$$HitsImplCopyWithImpl<_$HitsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NewsModelImplToJson(
+    return _$$HitsImplToJson(
       this,
     );
   }
 }
 
-abstract class _NewsModel implements NewsModel {
-  factory _NewsModel(
+abstract class _Hits implements Hits {
+  factory _Hits(
       {@JsonKey(name: 'id') final int id,
       @JsonKey(name: 'author') final String author,
       @JsonKey(name: 'title') final String title,
       @JsonKey(name: 'url') final String url,
       @JsonKey(name: 'created_at') final String createdAt,
-      @JsonKey(name: 'updated_at') final String updatedAt}) = _$NewsModelImpl;
+      @JsonKey(name: 'updated_at') final String updatedAt}) = _$HitsImpl;
 
-  factory _NewsModel.fromJson(Map<String, dynamic> json) =
-      _$NewsModelImpl.fromJson;
+  factory _Hits.fromJson(Map<String, dynamic> json) = _$HitsImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -270,6 +412,6 @@ abstract class _NewsModel implements NewsModel {
   String get updatedAt;
   @override
   @JsonKey(ignore: true)
-  _$$NewsModelImplCopyWith<_$NewsModelImpl> get copyWith =>
+  _$$HitsImplCopyWith<_$HitsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

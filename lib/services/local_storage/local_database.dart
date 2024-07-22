@@ -15,7 +15,7 @@ class LocalDatabase {
   }
 
 //insert new NEWS to Database
-  static Future insertNews(NewsModel news) async {
+  static Future insertNews(Hits news) async {
     var db = await createDatabase();
 
     return await db.insert(

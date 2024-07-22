@@ -8,6 +8,7 @@ class NewsHttpApiRepository implements NewsRepository {
   @override
   Future<NewsModel> fetchNewsList() async {
     final response = await _apiService.getApi(AppUrl.newsUrl);
+    //print(response);
     return NewsModel.fromJson(response);
   }
 }

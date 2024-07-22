@@ -13,8 +13,11 @@ class NewsBloc extends Bloc<NewsEvents, NewsState> {
   Future<void> fetchNewsList(
       FetchHackerNews event, Emitter<NewsState> emit) async {
     await newsRepository.fetchNewsList().then((value) {
+      print(value.hits);
       emit(state.copyWith(newsList: ApiResponse.completed(value)));
     }).onError((error, stackTrace) {
+      print(stackTrace);
+      print(error);
       emit(state.copyWith(newsList: ApiResponse.error(error.toString())));
     });
   }
