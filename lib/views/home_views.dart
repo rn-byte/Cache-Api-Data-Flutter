@@ -1,6 +1,7 @@
 import 'package:cache_api_data_flutter/bloc/news_bloc.dart';
 import 'package:cache_api_data_flutter/bloc/news_events.dart';
 import 'package:cache_api_data_flutter/bloc/news_state.dart';
+import 'package:cache_api_data_flutter/models/news_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../main.dart';
@@ -14,6 +15,7 @@ class HomeViews extends StatefulWidget {
 }
 
 class _HomeViewsState extends State<HomeViews> {
+  List<Hits> hits = [];
   late NewsBloc _newsBloc;
   @override
   void initState() {

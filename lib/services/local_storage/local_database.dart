@@ -53,4 +53,11 @@ class LocalDatabase {
       offset: lastNo,
     );
   }
+
+  //count the number of news inside the database
+  static Future<int?> getNewsCount() async {
+    var db = await createDatabase();
+    return Sqflite.firstIntValue(
+        await db.rawQuery('SELECT COUNT(*) FROM news'));
+  }
 }
